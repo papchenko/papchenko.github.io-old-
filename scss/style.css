@@ -1,0 +1,58 @@
+/* MAiN */
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0px auto;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.hi__row {
+  display: flex;
+  justify-content: center;
+}
+
+.hi__list {
+  justify-content: center;
+}
+
+.hi__list li:first-child {
+  background: url(../resources/images/ContentMainpage/html.png) 0 5px no-repeat;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  line-height: 38px;
+  padding: 0px 0px 0px 40px;
+  margin: 0px 0px 5px 0px;
+  justify-content: center;
+}
+
+.li2 {
+  background: url(../resources/images/ContentMainpage/css.png) 0 5px no-repeat;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  line-height: 38px;
+  padding: 0px 0px 0px 40px;
+  margin: 0px 0px 5px 0px;
+}
+
+.hi__list li:last-child {
+  background: url(../resources/images/ContentMainpage/javascript.png) 0 5px no-repeat;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  line-height: 38px;
+  padding: 0px 0px 0px 40px;
+  margin: 0;
+}
+
+/* END */
+/* FOOTER */
+/* END */
+/* FOR BIG SCREEN (PC, LEPTOP) */

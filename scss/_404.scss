@@ -1,0 +1,31 @@
+@import "_fonts";
+@import "_myhobbypage";
+@import "_nullstyle";
+@import "_const";
+
+
+
+
+.main404 {
+    width: 100%;
+    flex: 1 1 auto;
+}
+
+/* FOOTER */
+
+.footer {
+	background-color: $bc;
+ }
+.footer__row { 
+	display: flex;
+	height: 25px;
+	justify-content: center;
+	align-items: center;
+}
+.footer__text {
+	color:rgb(0, 0, 0);
+	font-size: 15px;
+	letter-spacing: 0.3px;
+ }
+
+/* END */
