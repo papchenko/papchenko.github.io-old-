@@ -56,6 +56,7 @@ $('.dark-button').on('click', function() {
     localStorage.setItem('dark-mode', 'dark');
   });
   
+  
   $('.light-button').on('click', function() {  
     $('.light-button').hide();
     $('.dark-button').show();
