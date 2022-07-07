@@ -271,7 +271,6 @@ header:before {
   width: 100%;
   flex: 1 1 auto;
   background: url(../resources/images/main.png) 0 0/cover no-repeat;
-  padding-bottom: 100px;
 }
 
 .firstTextMyHobby {
@@ -309,6 +308,21 @@ header:before {
 }
 
 /* END */
+@media screen and (min-width: 768px) {
+  .mainMyHobby {
+    width: 100%;
+    flex: 1 1 auto;
+    background: url(../resources/images/main.png) 0 0/cover no-repeat;
+  }
+
+  .firstTextMyHobby {
+    padding-top: 300px;
+    font-family: "Teko-Regular";
+    padding-top: 250px;
+    font-size: 50px;
+    text-align: center;
+  }
+}
 @font-face {
   font-family: "Teko-Regular";
   src: url("../fonts/teko_regular/Teko-Regular.eot");
@@ -581,7 +595,6 @@ header:before {
   width: 100%;
   flex: 1 1 auto;
   background: url(../resources/images/main.png) 0 0/cover no-repeat;
-  padding-bottom: 100px;
 }
 
 .firstTextMyHobby {
@@ -619,6 +632,21 @@ header:before {
 }
 
 /* END */
+@media screen and (min-width: 768px) {
+  .mainMyHobby {
+    width: 100%;
+    flex: 1 1 auto;
+    background: url(../resources/images/main.png) 0 0/cover no-repeat;
+  }
+
+  .firstTextMyHobby {
+    padding-top: 300px;
+    font-family: "Teko-Regular";
+    padding-top: 250px;
+    font-size: 50px;
+    text-align: center;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -821,7 +849,6 @@ header:before {
   width: 100%;
   flex: 1 1 auto;
   background: url(../resources/images/main.png) 0 0/cover no-repeat;
-  padding-bottom: 100px;
 }
 .mainAbout .avatar {
   display: flex;
@@ -832,24 +859,15 @@ header:before {
   margin-right: auto;
   max-width: 250px;
 }
-.mainAbout .textOneAbout {
+.mainAbout .text__About {
   font-family: "Teko-Regular";
-  padding-top: 5px;
+  font-size: 26px;
   text-align: center;
-  color: var(--second-color);
-  opacity: 0.5;
-  font-size: 40px;
 }
-.mainAbout .textTwoAbout {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  margin: 10px 50px 50px 50px;
+.mainAbout .subtext__about {
+  font-family: "Teko-Regular";
+  font-size: 16px;
   text-align: center;
-  flex-grow: 1;
-  font-size: 20px;
-}
-.mainAbout .textTwoAbout .linkMail {
-  font-size: 14px;
-  color: chocolate;
 }
 
 /* FOOTER */
@@ -880,7 +898,6 @@ header:before {
 }
 
 /* END */
-/* FOR BIG SCREEN (PC, LEPTOP) */
 @media screen and (min-width: 768px) {
   .mainAbout {
     width: 100%;
@@ -969,6 +986,17 @@ body {
 /* -------------------------------------------------------------------------------------------------------- */
 .wrapper {
   height: 100%;
+}
+
+body {
+  color: #222;
+  -webkit-transition: background-color 800ms ease;
+  transition: background-color 800ms ease;
+}
+
+body.dark {
+  background: url(../resources/images/mainDark.png) 0 0/cover no-repeat;
+  color: #fff;
 }
 
 /* HEADER */
@@ -1110,12 +1138,12 @@ header:before {
   }
 
   .header__list li {
-    margin: 130px 0px 0px 0px;
+    margin: 70px 0px 0px 0px;
     text-align: center;
   }
 
   .header__link {
-    font-size: 45px;
+    font-size: 30px;
   }
 }
 /* END */
@@ -1124,82 +1152,36 @@ header:before {
   width: 100%;
   flex: 1 1 auto;
   background: url(../resources/images/main.png) 0 0/cover no-repeat;
-  padding-bottom: 100px;
 }
-
-a {
-  font-size: 100%;
-  color: black;
-  text-decoration: none;
-}
-
-.firstText {
-  padding-top: 65px;
+.main .text {
+  font-family: "Teko-Bold";
+  padding-top: 50px;
   text-align: center;
+  font-size: 50px;
 }
-.firstText .one {
-  font-family: "Teko-Bold";
-  opacity: 0.8;
-  margin: 0 0 5px 0;
-  font-size: 61px;
-  color: var(--first-color);
-}
-.firstText .two {
-  font-family: "Teko-Bold";
-  opacity: 0.5;
-  margin: 0 0 10px 0;
-  font-size: 66px;
-  color: var(--second-color);
-}
-.firstText .three {
-  font-family: "Teko-Bold";
-  opacity: 0.9;
-  font-size: 56px;
-  color: var(--thirth-color);
-}
-
-.hi__row {
-  display: flex;
-  justify-content: center;
-}
-
-.skils {
+.main .skils {
   font-family: "Teko-Regular";
   text-align: center;
   padding-bottom: 10px;
 }
-
-.skils__title {
+.main .skils__title {
   font-family: "Teko-Regular";
   position: relative;
   padding: 0px 0px 0px 0px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
-
-.skils__text {
+.main .skils__text {
   display: none;
   font-size: 28px;
   padding-bottom: 10px;
   color: hsl(130deg, 62%, 32%);
 }
-
-.p2 {
+.main .sub__skils {
   font-family: "Teko-Regular";
   font-size: 22px;
 }
 
-.p3 {
-  font-family: "Teko-Regular";
-  font-size: 22px;
-}
-
-.p4 {
-  font-family: "Teko-Regular";
-  font-size: 28px;
-}
-
-/* END */
 /* FOOTER */
 .footer {
   background-color: #fff;
@@ -1230,7 +1212,6 @@ a {
 /* END */
 /* ------------------------------------------------------------------------------------------- MOBILE FIRST END */
 /* ------------------------------------------------------------------------------------------------------------ */
-/* FOR BIG SCREEN (PC, LEPTOP) */
 @media screen and (min-width: 768px) {
   .header {
     flex-direction: row;

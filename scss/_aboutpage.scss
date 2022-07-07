@@ -165,7 +165,6 @@ margin: 0px 0px 0px 20px;
     width: 100%;
     flex: 1 1 auto;
 	background: url(../resources/images/main.png) 0 0/cover no-repeat;
-    padding-bottom: 100px;
 
     .avatar {
         display: flex;
@@ -177,28 +176,16 @@ margin: 0px 0px 0px 20px;
         max-width: 250px;
     }
 
-    .textOneAbout {
+    .text__About {
         font-family: 'Teko-Regular';
-        padding-top: 5px;
+font-size: 26px;
         text-align: center;
-        color: var(--second-color);
-        opacity: 0.5;
-        font-size: 40px;
     }
-
-    .textTwoAbout {
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-        margin: 10px 50px 50px 50px;
-        text-align: center;
-        flex-grow: 1;
-        font-size: 20px;
-
-        .linkMail {
-            
-            font-size: 14px;
-            color:chocolate;
-        }
-}
+    .subtext__about{
+        font-family: 'Teko-Regular';
+        font-size: 16px;
+                text-align: center;
+    }
 }
 
 /* FOOTER */
@@ -233,7 +220,7 @@ margin: 0px 0px 0px 20px;
 }
 /* END */
 
-/* FOR BIG SCREEN (PC, LEPTOP) */
+// /* FOR BIG SCREEN (PC, LEPTOP) */
 @media screen and (min-width: 768px) {
 
     .mainAbout {

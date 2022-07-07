@@ -10,6 +10,24 @@
     height: 100%;
 }
 
+body {
+    color: #222;
+    -webkit-transition: background-color 800ms ease;
+    transition: background-color 800ms ease;
+  }
+  
+  body.dark {
+
+    background: url(../resources/images/mainDark.png) 0 0/cover no-repeat;
+    color: #fff;
+  }
+
+//   rgb(224, 215, 215)
+  
+//   body.dark img {
+//     -webkit-filter: brightness(70%);
+//     filter: brightness(70%);
+//   }
 
 /* HEADER */
 .container{
@@ -146,7 +164,7 @@ margin: 0px 0px 0px 20px;
         overflow: auto;
         transition: all 0.6s ease 0s;
         background-color: #18b5a4;
-        padding: 00px 10px 20px 10px;
+        padding: 0px 10px 20px 10px;
     }
     .header__menu.active{
         top: 0;
@@ -156,12 +174,12 @@ margin: 0px 0px 0px 20px;
         display: block;
     }
     .header__list li{
-        margin: 130px 0px 0px 0px;
+        margin: 70px 0px 0px 0px;
         text-align: center;
      }
 
     .header__link{
-        font-size: 45px;
+        font-size: 30px;
         
     }
 }
@@ -174,91 +192,42 @@ margin: 0px 0px 0px 20px;
     width: 100%;
     flex: 1 1 auto;
 	background: url(../resources/images/main.png) 0 0/cover no-repeat;
-    padding-bottom: 100px;
-}
-
-a {
-	font-size: 100%;
-	color: black;
-    text-decoration: none;
-}
-
-.firstText {
-    padding-top: 65px;
-    text-align: center;
-
-    .one {
-        font-family: 'Teko-Bold';
-        opacity: 0.8;
-        margin: 0 0 5px 0;
-        font-size: 61px;
-        color: var(--first-color);
-    }
-
-    .two {
-        font-family: 'Teko-Bold';
-        opacity: 0.5;
-        margin: 0 0 10px 0;
-        font-size: 66px;
-        color: var(--second-color);
-    }
-
-    .three {
-        font-family: 'Teko-Bold';
-        opacity: 0.9;
-        font-size: 56px;
-        color: var(--thirth-color);
-    }
-}
-
-// -------------------------------------------------------------------------------------------
-
-
-.hi__row {
-	display: flex;
-	justify-content: center;
-}
-
-.skils{
-    font-family: 'Teko-Regular';
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-
-.skils__title {
-    font-family: 'Teko-Regular';
-	position: relative;
-	padding: 0px 0px 0px 0px;
-	cursor: pointer;
-	transition: all 0.3s ease 0s;
- }
-
-.skils__text {
-	display: none;
-    font-size: 28px;
-    padding-bottom: 10px;
-    color:hsl(130, 62%, 32%);
     
- }
 
- .p2{
+    .text {
+        font-family: 'Teko-Bold';
+     padding-top: 50px;
+        text-align: center;
+        font-size: 50px;
+    }
+
+
+    .skils{
+        font-family: 'Teko-Regular';
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .skils__title {
+        font-family: 'Teko-Regular';
+        position: relative;
+        padding: 0px 0px 0px 0px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+     }
+    .skils__text {
+        display: none;
+        font-size: 28px;
+        padding-bottom: 10px;
+        color:hsl(130, 62%, 32%);
+        
+     }
+ .sub__skils{
     font-family: 'Teko-Regular';
     font-size: 22px;
-    
- }
- .p3{
-    font-family: 'Teko-Regular';
-    font-size: 22px;
- }
+}
+}
 
- .p4{
-    font-family: 'Teko-Regular';
-    font-size: 28px;
- }
 
-// -----------------------------------------------------------------------------------
-/* END */
 
 /* FOOTER */
 
@@ -295,7 +264,7 @@ a {
 /* ------------------------------------------------------------------------------------------- MOBILE FIRST END */
 /* ------------------------------------------------------------------------------------------------------------ */
 
-/* FOR BIG SCREEN (PC, LEPTOP) */
+// /* FOR BIG SCREEN (PC, LEPTOP) */
 @media screen and (min-width: 768px) {
 
 
