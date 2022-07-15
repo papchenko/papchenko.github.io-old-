@@ -78,14 +78,6 @@
 html,
 body {
   font-family: "Teko-Regular";
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
 .wrapper {
@@ -94,32 +86,49 @@ body {
   height: 100%;
 }
 
-/* background-color */
-/* padding-top */
-/*===== Colores =====*/
-:root {
-  --first-color: #0E2431;
-  --second-color: #4070F4;
-  --thirth-color: #4e4848;
+/* MAiN */
+.main {
+  width: 100%;
+  flex: 1 1 auto;
+  background: url(../resources/images/mainLight.png) 0 0/cover no-repeat;
 }
 
-.first_color {
-  font-size: 70px;
-  color: var(--first-color);
+.main__about {
+  width: 100%;
+  flex: 1 1 auto;
+  background: url(../resources/images/mainLight.png) 0 0/cover no-repeat;
 }
 
-.second_color {
-  font-size: 85px;
-  color: var(--second-color);
+.mainMyHobby {
+  width: 100%;
+  flex: 1 1 auto;
+  background: url(../resources/images/mainLight.png) 0 0/cover no-repeat;
 }
 
-.thirth_color {
-  font-size: 50;
-  color: var(--thirth-color);
+/* FOOTER */
+.footer__row {
+  display: flex;
+  justify-content: center;
+  height: 15px;
+}
+.footer__row .imgSocial {
+  display: inline;
+  padding-top: 2px;
+  height: 16px;
+  padding-left: 0.5em;
+}
+.footer__row .imgSocial:hover {
+  transform: scale(1.1);
 }
 
-/*===================================================================================================================*/
-/* HEADER */
+.footer__text {
+  text-align: center;
+  color: rgb(150, 142, 142);
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+/* END */
 .container {
   max-width: 1180px;
   margin: 0px auto;
@@ -175,15 +184,25 @@ header:before {
   text-decoration: none;
 }
 
+@media screen and (min-width: 768px) {
+  .socialMobile {
+    display: none;
+  }
+  body.dark .footer {
+    background-color: #fff;
+  }
+}
 @media (max-width: 767px) {
+  body.dark {
+    background: url(../resources/images/mainDarkMobile.png) 0 0/cover no-repeat;
+    color: #fff;
+  }
   body.lock {
     overflow: hidden;
   }
-
   .header__body {
     height: 40px;
   }
-
   .header__burger {
     display: block;
     position: relative;
@@ -192,7 +211,6 @@ header:before {
     position: relative;
     z-index: 3;
   }
-
   .header__burger span {
     position: absolute;
     background-color: rgb(0, 0, 0);
@@ -203,7 +221,6 @@ header:before {
     top: 9px;
     transition: all 0.3s ease 0s;
   }
-
   .header__burger:before,
 .header__burger:after {
     content: "";
@@ -214,29 +231,23 @@ header:before {
     left: 0;
     transition: all 0.3s ease 0s;
   }
-
   .header__burger:before {
     top: 0;
   }
-
   .header__burger:after {
     bottom: 0;
   }
-
   .header__burger.active:before {
     transform: rotate(45deg);
     top: 9px;
   }
-
   .header__burger.active:after {
     transform: rotate(-45deg);
     bottom: 9px;
   }
-
   .header__burger.active span {
     transform: scale(0);
   }
-
   .header__menu {
     position: fixed;
     top: -100%;
@@ -245,118 +256,62 @@ header:before {
     height: 100%;
     overflow: auto;
     transition: all 0.6s ease 0s;
-    background-color: #18b5a4;
+    background-color: #ceeeeb;
+    opacity: 0.9;
     padding: 0px 10px 20px 10px;
   }
-
   .header__menu.active {
     top: 0;
   }
-
   .header__list {
     display: block;
   }
-
   .header__list li {
-    margin: 130px 0px 0px 0px;
+    margin: 70px 0px 0px 0px;
     text-align: center;
   }
-
   .header__link {
-    font-size: 45px;
+    border: 1px solid #333;
+    padding: 0.3rem;
+    background: #333;
+    border-radius: 5px;
+    color: #eaeaea;
+  }
+  .footer__row {
+    display: none;
+  }
+  .socialMobile {
+    letter-spacing: 10px;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  .socialMobile .imgSocial {
+    height: 30px;
   }
 }
-/* END */
-.mainMyHobby {
-  width: 100%;
-  flex: 1 1 auto;
-  background: url(../resources/images/main.png) 0 0/cover no-repeat;
-}
-
 .firstTextMyHobby {
   font-family: "Teko-Regular";
   padding-top: 250px;
-  font-size: 18px;
+  padding-bottom: 250px;
+  font-size: 35px;
+  color: rgb(38, 168, 82);
   text-align: center;
 }
 
-/* FOOTER */
-.footer {
-  background-color: #fff;
-}
-
-.footer__row {
-  display: flex;
-  height: 38px;
-  justify-content: center;
-}
-.footer__row .imgSocial {
-  display: inline;
-  padding-top: 7px;
-  height: 25px;
-  padding-left: 0.7em;
-}
-.footer__row .imgSocial:hover {
-  transform: scale(1.1);
-}
-
-.footer__text {
-  text-align: center;
-  color: rgb(0, 0, 0);
-  font-size: 15px;
-  letter-spacing: 0.3px;
-}
-
-/* END */
 @media screen and (min-width: 768px) {
   .mainMyHobby {
     width: 100%;
     flex: 1 1 auto;
-    background: url(../resources/images/main.png) 0 0/cover no-repeat;
   }
-
   .firstTextMyHobby {
-    padding-top: 300px;
     font-family: "Teko-Regular";
     padding-top: 250px;
     font-size: 50px;
     text-align: center;
   }
-}
-@font-face {
-  font-family: "Teko-Regular";
-  src: url("../fonts/teko_regular/Teko-Regular.eot");
-  src: local("☺"), url("../fonts/teko_regular/Teko-Regular.woff") format("woff"), url("../fonts/teko_regular/Teko-Regular.ttf") format("truetype"), url("../fonts/teko_regular/Teko-Regular.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Teko-Bold";
-  src: url("../fonts/teko_bold/Teko-Bold.eot");
-  src: local("☺"), url("../fonts/teko_bold/Teko-Bold.woff") format("woff"), url("../fonts/teko_bold/Teko-Bold.ttf") format("truetype"), url("../fonts/teko_bold/Teko-Bold.svg") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Teko_Light";
-  src: url("../fonts/teko_light/Teko-Light.eot");
-  src: local("☺"), url("../fonts/teko_light/Teko-Light.woff") format("woff"), url("../fonts/teko_light/Teko-Light.ttf") format("truetype"), url("../fonts/teko_light/Teko-Light.svg") format("svg");
-  font-weight: lighter;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Teko_Medium";
-  src: url("../fonts/teko_medium/Teko-Medium.eot");
-  src: local("☺"), url("../fonts/teko_medium/Teko-Medium.woff") format("woff"), url("../fonts/teko_medium/Teko-Medium.ttf") format("truetype"), url("../fonts/teko_medium/Teko-Medium.svg") format("svg");
-  font-weight: medium;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Teko_SemiBold";
-  src: url("../fonts/teko_semibold/Teko-SemiBold.eot");
-  src: local("☺"), url("../fonts/teko_semibold/Teko-SemiBold.woff") format("woff"), url("../fonts/teko_semibold/Teko-SemiBold.ttf") format("truetype"), url("../fonts/teko_semibold/Teko-SemiBold.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
 }
 @font-face {
   font-family: "Teko-Regular";
@@ -402,14 +357,6 @@ header:before {
 html,
 body {
   font-family: "Teko-Regular";
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
 .wrapper {
@@ -418,207 +365,36 @@ body {
   height: 100%;
 }
 
-/* background-color */
-/* padding-top */
-/*===== Colores =====*/
-:root {
-  --first-color: #0E2431;
-  --second-color: #4070F4;
-  --thirth-color: #4e4848;
-}
-
-.first_color {
-  font-size: 70px;
-  color: var(--first-color);
-}
-
-.second_color {
-  font-size: 85px;
-  color: var(--second-color);
-}
-
-.thirth_color {
-  font-size: 50;
-  color: var(--thirth-color);
-}
-
-/*===================================================================================================================*/
-/* HEADER */
-.container {
-  max-width: 1180px;
-  margin: 0px auto;
-  padding: 0px 10px;
-}
-
-.header {
-  position: fixed;
+/* MAiN */
+.main {
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 50;
+  flex: 1 1 auto;
+  background: url(../resources/images/mainLight.png) 0 0/cover no-repeat;
 }
 
-header:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.main__about {
   width: 100%;
-  height: 100%;
-  background-color: #fff;
-  z-index: 2;
+  flex: 1 1 auto;
+  background: url(../resources/images/mainLight.png) 0 0/cover no-repeat;
 }
 
-.header__body {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  height: 50px;
-  align-items: center;
-}
-
-.header__burger {
-  display: none;
-}
-
-.header__list {
-  display: flex;
-  position: relative;
-  z-index: 2;
-}
-
-.header__list li {
-  list-style: none;
-  margin: 0px 0px 0px 20px;
-}
-
-.header__link {
-  color: rgb(0, 0, 0);
-  text-transform: uppercase;
-  font-size: 22px;
-  text-decoration: none;
-}
-
-@media (max-width: 767px) {
-  body.lock {
-    overflow: hidden;
-  }
-
-  .header__body {
-    height: 40px;
-  }
-
-  .header__burger {
-    display: block;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    position: relative;
-    z-index: 3;
-  }
-
-  .header__burger span {
-    position: absolute;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    top: 9px;
-    transition: all 0.3s ease 0s;
-  }
-
-  .header__burger:before,
-.header__burger:after {
-    content: "";
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
-    transition: all 0.3s ease 0s;
-  }
-
-  .header__burger:before {
-    top: 0;
-  }
-
-  .header__burger:after {
-    bottom: 0;
-  }
-
-  .header__burger.active:before {
-    transform: rotate(45deg);
-    top: 9px;
-  }
-
-  .header__burger.active:after {
-    transform: rotate(-45deg);
-    bottom: 9px;
-  }
-
-  .header__burger.active span {
-    transform: scale(0);
-  }
-
-  .header__menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    transition: all 0.6s ease 0s;
-    background-color: #18b5a4;
-    padding: 0px 10px 20px 10px;
-  }
-
-  .header__menu.active {
-    top: 0;
-  }
-
-  .header__list {
-    display: block;
-  }
-
-  .header__list li {
-    margin: 130px 0px 0px 0px;
-    text-align: center;
-  }
-
-  .header__link {
-    font-size: 45px;
-  }
-}
-/* END */
 .mainMyHobby {
   width: 100%;
   flex: 1 1 auto;
-  background: url(../resources/images/main.png) 0 0/cover no-repeat;
-}
-
-.firstTextMyHobby {
-  font-family: "Teko-Regular";
-  padding-top: 250px;
-  font-size: 18px;
-  text-align: center;
+  background: url(../resources/images/mainLight.png) 0 0/cover no-repeat;
 }
 
 /* FOOTER */
-.footer {
-  background-color: #fff;
-}
-
 .footer__row {
   display: flex;
-  height: 38px;
   justify-content: center;
+  height: 15px;
 }
 .footer__row .imgSocial {
   display: inline;
-  padding-top: 7px;
-  height: 25px;
-  padding-left: 0.7em;
+  padding-top: 2px;
+  height: 16px;
+  padding-left: 0.5em;
 }
 .footer__row .imgSocial:hover {
   transform: scale(1.1);
@@ -626,78 +402,12 @@ header:before {
 
 .footer__text {
   text-align: center;
-  color: rgb(0, 0, 0);
-  font-size: 15px;
+  color: rgb(150, 142, 142);
+  font-size: 13px;
   letter-spacing: 0.3px;
 }
 
 /* END */
-@media screen and (min-width: 768px) {
-  .mainMyHobby {
-    width: 100%;
-    flex: 1 1 auto;
-    background: url(../resources/images/main.png) 0 0/cover no-repeat;
-  }
-
-  .firstTextMyHobby {
-    padding-top: 300px;
-    font-family: "Teko-Regular";
-    padding-top: 250px;
-    font-size: 50px;
-    text-align: center;
-  }
-}
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-html,
-body {
-  font-family: "Teko-Regular";
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* background-color */
-/* padding-top */
-/*===== Colores =====*/
-:root {
-  --first-color: #0E2431;
-  --second-color: #4070F4;
-  --thirth-color: #4e4848;
-}
-
-.first_color {
-  font-size: 70px;
-  color: var(--first-color);
-}
-
-.second_color {
-  font-size: 85px;
-  color: var(--second-color);
-}
-
-.thirth_color {
-  font-size: 50;
-  color: var(--thirth-color);
-}
-
-/*===================================================================================================================*/
-/* HEADER */
 .container {
   max-width: 1180px;
   margin: 0px auto;
@@ -753,15 +463,25 @@ header:before {
   text-decoration: none;
 }
 
+@media screen and (min-width: 768px) {
+  .socialMobile {
+    display: none;
+  }
+  body.dark .footer {
+    background-color: #fff;
+  }
+}
 @media (max-width: 767px) {
+  body.dark {
+    background: url(../resources/images/mainDarkMobile.png) 0 0/cover no-repeat;
+    color: #fff;
+  }
   body.lock {
     overflow: hidden;
   }
-
   .header__body {
     height: 40px;
   }
-
   .header__burger {
     display: block;
     position: relative;
@@ -770,7 +490,6 @@ header:before {
     position: relative;
     z-index: 3;
   }
-
   .header__burger span {
     position: absolute;
     background-color: rgb(0, 0, 0);
@@ -781,7 +500,6 @@ header:before {
     top: 9px;
     transition: all 0.3s ease 0s;
   }
-
   .header__burger:before,
 .header__burger:after {
     content: "";
@@ -792,29 +510,23 @@ header:before {
     left: 0;
     transition: all 0.3s ease 0s;
   }
-
   .header__burger:before {
     top: 0;
   }
-
   .header__burger:after {
     bottom: 0;
   }
-
   .header__burger.active:before {
     transform: rotate(45deg);
     top: 9px;
   }
-
   .header__burger.active:after {
     transform: rotate(-45deg);
     bottom: 9px;
   }
-
   .header__burger.active span {
     transform: scale(0);
   }
-
   .header__menu {
     position: fixed;
     top: -100%;
@@ -823,113 +535,153 @@ header:before {
     height: 100%;
     overflow: auto;
     transition: all 0.6s ease 0s;
-    background-color: #18b5a4;
+    background-color: #ceeeeb;
+    opacity: 0.9;
     padding: 0px 10px 20px 10px;
   }
-
   .header__menu.active {
     top: 0;
   }
-
   .header__list {
     display: block;
   }
-
   .header__list li {
-    margin: 130px 0px 0px 0px;
+    margin: 70px 0px 0px 0px;
     text-align: center;
   }
-
   .header__link {
-    font-size: 45px;
+    border: 1px solid #333;
+    padding: 0.3rem;
+    background: #333;
+    border-radius: 5px;
+    color: #eaeaea;
+  }
+  .footer__row {
+    display: none;
+  }
+  .socialMobile {
+    letter-spacing: 10px;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  .socialMobile .imgSocial {
+    height: 30px;
   }
 }
-/* END */
-.mainAbout {
-  width: 100%;
-  flex: 1 1 auto;
-  background: url(../resources/images/main.png) 0 0/cover no-repeat;
+@media (max-width: 767px) {
+  .avatar {
+    display: flex;
+    padding-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90px;
+    filter: grayscale(1);
+    transition: all 1s ease 0s;
+  }
+  .avatar:hover {
+    filter: grayscale(0);
+    transition: all 1s ease 0s;
+  }
+  .skills {
+    padding-top: 20px;
+  }
+  .skills .skills__text1 {
+    font-size: 16px;
+    padding: 0px 20px 0px 20px;
+  }
+  .skills .skills__pic1 {
+    width: 100%;
+    max-height: 110px;
+    max-width: 110px;
+  }
+  .skills .skills__pic1:hover {
+    transform: scale(1.6);
+  }
+  .text__about {
+    padding-top: 20px;
+    font-family: "Teko-Regular";
+    font-size: 16px;
+    text-align: center;
+  }
+  .email {
+    padding-bottom: 15px;
+    font-family: "Teko-Regular";
+    font-size: 16px;
+    text-align: center;
+    color: #18b5a4;
+  }
+  .text__about {
+    font-family: "Teko-Regular";
+    font-size: 36px;
+    text-align: center;
+  }
+  .text__about p {
+    font-family: "Teko-Regular";
+    font-size: 16px;
+    text-align: center;
+  }
+  .email {
+    font-family: "Teko-Regular";
+    font-size: 16px;
+    padding: 0px 0px 20px 0px;
+    text-align: center;
+    color: #18b5a4;
+  }
 }
-.mainAbout .avatar {
-  display: flex;
-  padding-top: 5.5em;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 250px;
-}
-.mainAbout .text__About {
-  font-family: "Teko-Regular";
-  font-size: 26px;
-  text-align: center;
-}
-.mainAbout .subtext__about {
-  font-family: "Teko-Regular";
-  font-size: 16px;
-  text-align: center;
-}
-
-/* FOOTER */
-.footer {
-  background-color: #fff;
-}
-
-.footer__row {
-  display: flex;
-  height: 38px;
-  justify-content: center;
-}
-.footer__row .imgSocial {
-  display: inline;
-  padding-top: 7px;
-  height: 25px;
-  padding-left: 0.7em;
-}
-.footer__row .imgSocial:hover {
-  transform: scale(1.1);
-}
-
-.footer__text {
-  text-align: center;
-  color: rgb(0, 0, 0);
-  font-size: 15px;
-  letter-spacing: 0.3px;
-}
-
-/* END */
 @media screen and (min-width: 768px) {
   .mainAbout {
     width: 100%;
     flex: 1 1 auto;
-    background: url(../resources/images/main.png) 0 0/cover no-repeat;
     padding-bottom: 100px;
   }
-
   .avatar {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    min-width: 350px;
+    display: flex;
+    padding-top: 4em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 200px;
+    filter: grayscale(1);
+    transition: all 1s ease 0s;
   }
   .avatar:hover {
-    transform: scale(1.1);
+    filter: grayscale(0);
+    transition: all 1s ease 0s;
   }
-
-  .textOneAbout {
-    padding-top: 90px;
+  .skills {
+    display: flex;
     text-align: center;
-    color: rgb(243, 237, 217);
-    font-size: 40px;
+    margin: 20px 250px 0px 250px;
   }
-
-  .textTwoAbout {
-    font-family: "Teko-Regular";
-    padding-top: 80px;
-    text-align: center;
-    flex-grow: 1;
+  .skills .skills__text1 {
     font-size: 20px;
-    padding-bottom: 100px;
+    text-align: left;
+  }
+  .skills .skills__pic1 {
+    width: 100%;
+    max-width: 230px;
+    padding-right: 25px;
+  }
+  .skills .skills__pic1:hover {
+    transform: scale(1.6);
+  }
+  .text__about {
+    font-family: "Teko-Regular";
+    font-size: 36px;
+    text-align: center;
+  }
+  .text__about p {
+    font-family: "Teko-Regular";
+    font-size: 16px;
+    text-align: center;
+  }
+  .email {
+    font-family: "Teko-Regular";
+    font-size: 16px;
+    text-align: center;
+    color: #18b5a4;
   }
 }
 * {
@@ -941,14 +693,6 @@ header:before {
 html,
 body {
   font-family: "Teko-Regular";
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
 .wrapper {
@@ -957,31 +701,212 @@ body {
   height: 100%;
 }
 
-/* background-color */
-/* padding-top */
-/*===== Colores =====*/
-:root {
-  --first-color: #0E2431;
-  --second-color: #4070F4;
-  --thirth-color: #4e4848;
+/* MAiN */
+.main {
+  width: 100%;
+  flex: 1 1 auto;
+  background: url(../resources/images/mainLight.png) 0 0/cover no-repeat;
 }
 
-.first_color {
-  font-size: 70px;
-  color: var(--first-color);
+.main__about {
+  width: 100%;
+  flex: 1 1 auto;
+  background: url(../resources/images/mainLight.png) 0 0/cover no-repeat;
 }
 
-.second_color {
-  font-size: 85px;
-  color: var(--second-color);
+.mainMyHobby {
+  width: 100%;
+  flex: 1 1 auto;
+  background: url(../resources/images/mainLight.png) 0 0/cover no-repeat;
 }
 
-.thirth_color {
-  font-size: 50;
-  color: var(--thirth-color);
+/* FOOTER */
+.footer__row {
+  display: flex;
+  justify-content: center;
+  height: 15px;
+}
+.footer__row .imgSocial {
+  display: inline;
+  padding-top: 2px;
+  height: 16px;
+  padding-left: 0.5em;
+}
+.footer__row .imgSocial:hover {
+  transform: scale(1.1);
 }
 
-/*===================================================================================================================*/
+.footer__text {
+  text-align: center;
+  color: rgb(150, 142, 142);
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+/* END */
+.container {
+  max-width: 1180px;
+  margin: 0px auto;
+  padding: 0px 10px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.header__body {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__list {
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.header__list li {
+  list-style: none;
+  margin: 0px 0px 0px 20px;
+}
+
+.header__link {
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .socialMobile {
+    display: none;
+  }
+  body.dark .footer {
+    background-color: #fff;
+  }
+}
+@media (max-width: 767px) {
+  body.dark {
+    background: url(../resources/images/mainDarkMobile.png) 0 0/cover no-repeat;
+    color: #fff;
+  }
+  body.lock {
+    overflow: hidden;
+  }
+  .header__body {
+    height: 40px;
+  }
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    z-index: 3;
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before,
+.header__burger:after {
+    content: "";
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
+  .header__burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header__burger.active span {
+    transform: scale(0);
+  }
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transition: all 0.6s ease 0s;
+    background-color: #ceeeeb;
+    opacity: 0.9;
+    padding: 0px 10px 20px 10px;
+  }
+  .header__menu.active {
+    top: 0;
+  }
+  .header__list {
+    display: block;
+  }
+  .header__list li {
+    margin: 70px 0px 0px 0px;
+    text-align: center;
+  }
+  .header__link {
+    border: 1px solid #333;
+    padding: 0.3rem;
+    background: #333;
+    border-radius: 5px;
+    color: #eaeaea;
+  }
+  .footer__row {
+    display: none;
+  }
+  .socialMobile {
+    letter-spacing: 10px;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  .socialMobile .imgSocial {
+    height: 30px;
+  }
+}
 /* ------------------------------------------------------------------------------------------- MOBILE FIRST */
 /* -------------------------------------------------------------------------------------------------------- */
 .wrapper {
@@ -989,26 +914,14 @@ body {
 }
 
 body {
-  color: #222;
-  -webkit-transition: background-color 800ms ease;
   transition: background-color 800ms ease;
 }
 
-body.dark {
-  background: url(../resources/images/mainDark.png) 0 0/cover no-repeat;
-  color: #fff;
-}
-
-body.dark .footer {
-  background-color: rgb(224, 215, 215);
-}
-
 button {
-  border: 1px solid #333;
-  padding: 0.5rem;
-  background: #333;
-  border-radius: 5px;
-  transition: background 200ms ease;
+  border: 2px solid rgb(71, 209, 66);
+  padding: 0.2rem;
+  background: rgb(71, 209, 66);
+  border-radius: 3px;
   color: #eaeaea;
 }
 
@@ -1022,283 +935,130 @@ button:hover {
 }
 
 /* HEADER */
-.container {
-  max-width: 1180px;
-  margin: 0px auto;
-  padding: 0px 10px;
-}
-
-.header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 50;
-}
-
-header:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  z-index: 2;
-}
-
-.header__body {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  height: 50px;
-  align-items: center;
-}
-
-.header__burger {
-  display: none;
-}
-
-.header__list {
-  display: flex;
-  position: relative;
-  z-index: 2;
-}
-
-.header__list li {
-  list-style: none;
-  margin: 0px 0px 0px 20px;
-}
-
-.header__link {
-  color: rgb(0, 0, 0);
-  text-transform: uppercase;
-  font-size: 22px;
-  text-decoration: none;
-}
-
 @media (max-width: 767px) {
-  body.lock {
-    overflow: hidden;
+  .skils {
+    display: none;
   }
-
-  .header__body {
-    height: 40px;
-  }
-
-  .header__burger {
-    display: block;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    position: relative;
-    z-index: 3;
-  }
-
-  .header__burger span {
-    position: absolute;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    top: 9px;
-    transition: all 0.3s ease 0s;
-  }
-
-  .header__burger:before,
-.header__burger:after {
-    content: "";
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
-    transition: all 0.3s ease 0s;
-  }
-
-  .header__burger:before {
-    top: 0;
-  }
-
-  .header__burger:after {
-    bottom: 0;
-  }
-
-  .header__burger.active:before {
-    transform: rotate(45deg);
-    top: 9px;
-  }
-
-  .header__burger.active:after {
-    transform: rotate(-45deg);
-    bottom: 9px;
-  }
-
-  .header__burger.active span {
-    transform: scale(0);
-  }
-
-  .header__menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    transition: all 0.6s ease 0s;
-    background-color: #18b5a4;
-    padding: 0px 10px 20px 10px;
-  }
-
-  .header__menu.active {
-    top: 0;
-  }
-
-  .header__list {
-    display: block;
-  }
-
-  .header__list li {
-    margin: 70px 0px 0px 0px;
+  .skils__mobileVersion {
+    font-family: "Teko-Regular";
     text-align: center;
+    font-size: 20px;
   }
-
-  .header__link {
-    font-size: 30px;
+  .skils__mobileVersion .skils__text1 {
+    display: none;
+    -moz-column-count: 3;
+         column-count: 3;
+    margin: 10px 80px 10px 80px;
+  }
+  .text__main .text1 {
+    font-family: "Teko-Bold";
+    padding-top: 70px;
+    margin-bottom: -60px;
+    text-align: center;
+    font-size: 65px;
+  }
+  .text__main .text2 {
+    font-family: "Teko-Bold";
+    margin-bottom: -35px;
+    text-align: center;
+    font-size: 63px;
+  }
+  .text__main .text3 {
+    font-family: "Teko-Bold";
+    margin-bottom: -55px;
+    text-align: center;
+    font-size: 75px;
+    color: rgb(34, 173, 34);
+  }
+  .text__main .text4 {
+    font-family: "Teko-Bold";
+    margin-bottom: -45px;
+    text-align: center;
+    font-size: 59px;
+  }
+  .text__main .text5 {
+    font-family: "Teko-Bold";
+    text-align: center;
+    font-size: 65px;
+  }
+  button {
+    border: 8px solid rgb(71, 209, 66);
+    padding: 0.2rem;
+    background: rgb(71, 209, 66);
+    border-radius: 3px;
+    color: #eaeaea;
   }
 }
-/* END */
-/* MAiN */
-.main {
-  width: 100%;
-  flex: 1 1 auto;
-  background: url(../resources/images/main.png) 0 0/cover no-repeat;
-}
-.main .text {
-  font-family: "Teko-Bold";
-  padding-top: 50px;
-  text-align: center;
-  font-size: 50px;
-}
-.main .skils {
-  font-family: "Teko-Regular";
-  text-align: center;
-  padding-bottom: 10px;
-}
-.main .skils__title {
-  font-family: "Teko-Regular";
-  position: relative;
-  padding: 0px 0px 0px 0px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-.main .skils__text {
-  display: none;
-  font-size: 28px;
-  padding-bottom: 10px;
-  color: hsl(130deg, 62%, 32%);
-}
-.main .sub__skils {
-  font-family: "Teko-Regular";
-  font-size: 22px;
-}
-
-/* FOOTER */
-.footer {
-  background-color: #fff;
-}
-
-.footer__row {
-  display: flex;
-  height: 38px;
-  justify-content: center;
-}
-.footer__row .imgSocial {
-  display: inline;
-  padding-top: 7px;
-  height: 25px;
-  padding-left: 0.7em;
-}
-.footer__row .imgSocial:hover {
-  transform: scale(1.1);
-}
-
-.footer__text {
-  text-align: center;
-  color: rgb(0, 0, 0);
-  font-size: 15px;
-  letter-spacing: 0.3px;
-}
-
-/* END */
 /* ------------------------------------------------------------------------------------------- MOBILE FIRST END */
 /* ------------------------------------------------------------------------------------------------------------ */
 @media screen and (min-width: 768px) {
-  .header {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  body.dark {
+    background: url(../resources/images/mainDark.png) 0 0/cover no-repeat;
+    color: #fff;
   }
-
-  .navigation {
+  .text__main .text1 {
     font-family: "Teko-Bold";
-    display: flex;
-    padding-top: 0.5em;
-    padding-left: 0.5em;
-    font-size: 18px;
-    text-indent: 5px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .main {
-    max-width: 970px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .main {
-    max-width: 750px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 767px) {
-  .main {
-    max-width: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  .firstText {
-    padding-top: 70px;
+    padding-top: 50px;
+    margin-bottom: -60px;
     text-align: center;
+    font-size: 82px;
   }
-  .firstText .one {
-    margin: 0 0 5px 0;
-    font-size: 95px;
-    color: var(--first-color);
-  }
-  .firstText .two {
-    margin: 0 0 10px 0;
-    font-size: 100px;
-    color: var(--second-color);
-  }
-  .firstText .three {
-    font-size: 90px;
-    color: var(--thirth-color);
-  }
-  .firstText .secondText {
-    font-size: 45;
+  .text__main .text2 {
+    font-family: "Teko-Bold";
+    margin-bottom: -35px;
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    font-size: 82px;
   }
-}
-@media screen and (min-width: 768px) {
-  .content {
-    flex: 1 1 auto;
+  .text__main .text3 {
+    font-family: "Teko-Bold";
+    margin-bottom: -45px;
+    text-align: center;
+    font-size: 96px;
+    color: rgb(34, 173, 34);
   }
-}
-@media screen and (min-width: 768px) {
-  .hi__row {
-    display: flex;
-    justify-content: center;
+  .text__main .text4 {
+    font-family: "Teko-Bold";
+    margin-bottom: -45px;
+    text-align: center;
+    font-size: 76px;
+  }
+  .text__main .text5 {
+    font-family: "Teko-Bold";
+    text-align: center;
+    font-size: 76px;
+  }
+  .skils {
+    font-family: "Teko-Regular";
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .skils__title {
+    font-family: "Teko-Regular";
+    position: relative;
+    padding: 0px 0px 0px 0px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  .skils__text {
+    display: none;
+    font-size: 28px;
+    padding-bottom: 10px;
+    color: hsl(130deg, 62%, 32%);
+  }
+  .sub__skils {
+    font-family: "Teko-Regular";
+    font-size: 22px;
+  }
+  .skils__mobileversion {
+    display: none;
+  }
+  .skils__titleMobile {
+    display: none;
+  }
+  .sub__skilsMobile {
+    display: none;
+  }
+  .skils__text1 {
+    display: none;
   }
 }
